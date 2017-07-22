@@ -2,17 +2,7 @@
 
 @section('content')
 <div class="page-wrapper">
-    <!-- top Links -->
-    <div class="top-links">
-        <div class="container">
-            <ul class="row links">
-                <li class="col-xs-12 col-sm-3 link-item"><span>1</span><a href="index.html">Choose Your Location</a></li>
-                <li class="col-xs-12 col-sm-3 link-item"><span>2</span><a href="restaurants.html">Choose Restaurant</a></li>
-                <li class="col-xs-12 col-sm-3 link-item active"><span>3</span><a href="profile.html">Pick Your favorite food</a></li>
-                <li class="col-xs-12 col-sm-3 link-item"><span>4</span><a href="checkout.html">Order and Pay online</a></li>
-            </ul>
-        </div>
-    </div>
+   
     <!-- end:Top links -->
     <!-- start: Inner page hero -->
     <div class="inner-page-hero bg-image" data-image-src="http://placehold.it/1670x480">
@@ -41,54 +31,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
-                <div class="sidebar clearfix m-b-20">
-                    <div class="main-block">
-                        <div class="sidebar-title white-txt">
-                            <h6>Choose Cusine</h6> <i class="fa fa-cutlery pull-right"></i> </div>
-                        <div class="input-group">
-                            <input type="text" class="form-control search-field" placeholder="Search your favorite food"> <span class="input-group-btn"> 
-                     <button class="btn btn-secondary search-btn" type="button"><i class="fa fa-search"></i></button> 
-                     </span> </div>
-                        <form>
-                            <ul>
-                                <li>
-                                    <label class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Barbecuing and Grilling</span> </label>
-                                </li>
-                                <li>
-                                    <label class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Appetizers</span> </label>
-                                </li>
-                                <li>
-                                    <label class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Soup and salads</span> </label>
-                                </li>
-                                <li>
-                                    <label class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Seafood</span> </label>
-                                </li>
-                                <li>
-                                    <label class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Beverages</span> </label>
-                                </li>
-                            </ul>
-                        </form>
-                        <div class="clearfix"></div>
-                    </div>
-                    <!-- end:Sidebar nav -->
-                    <div class="widget-delivery">
-                        <form>
-                            <div class="col-xs-6 col-sm-12 col-md-6 col-lg-6">
-                                <label class="custom-control custom-radio">
-                                    <input id="radio1" name="radio" type="radio" class="custom-control-input" checked=""> <span class="custom-control-indicator"></span> <span class="custom-control-description">Delivery</span> </label>
-                            </div>
-                            <div class="col-xs-6 col-sm-12 col-md-6 col-lg-6">
-                                <label class="custom-control custom-radio">
-                                    <input id="radio2" name="radio" type="radio" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Takeout</span> </label>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+                
                 <div class="widget clearfix">
                     <!-- /widget heading -->
                     <div class="widget-heading">
@@ -152,12 +95,7 @@
                                 <div class="product-name">Fried Chicken with cheese</div>
                                 <div class="price-btn-block"> <span class="price">$ 15,99</span> <a href="profile.html" class="btn theme-btn-dash pull-right">Order Now</a> </div>
                             </div>
-                            <div class="restaurant-block">
-                                <div class="left">
-                                    <a class="pull-left" href="#"> <img src="http://placehold.it/50x46" alt="Restaurant logo"> </a>
-                                    <div class="pull-left right-text"> <a href="#">Chicken Restaurant</a> <span>68 5th Avenue New York</span> </div>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                     <!-- Each popular food item starts -->
@@ -174,12 +112,7 @@
                                 <div class="product-name">Fried Chicken with cheese</div>
                                 <div class="price-btn-block"> <span class="price">$ 18,49</span> <a href="profile.html" class="btn theme-btn-dash pull-right">Order Now</a> </div>
                             </div>
-                            <div class="restaurant-block">
-                                <div class="left">
-                                    <a class="pull-left" href="#"> <img src="http://placehold.it/50x46" alt="Restaurant logo"> </a>
-                                    <div class="pull-left right-text"> <a href="#">Chicken Restaurant</a> <span>68 5th Avenue New York</span> </div>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                     <!-- Each popular food item starts -->
@@ -196,12 +129,7 @@
                                 <div class="product-name">Fried Chicken with cheese</div>
                                 <div class="price-btn-block"> <span class="price">$ 21,19</span> <a href="profile.html" class="btn theme-btn-dash pull-right">Order Now</a> </div>
                             </div>
-                            <div class="restaurant-block">
-                                <div class="left">
-                                    <a class="pull-left" href="#"> <img src="http://placehold.it/50x46" alt="Restaurant logo"> </a>
-                                    <div class="pull-left right-text"> <a href="#">Chicken Restaurant</a> <span>68 5th Avenue New York</span> </div>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                     <!-- Each popular food item starts -->
@@ -217,12 +145,7 @@
                                 <div class="product-name">Fried Chicken with cheese</div>
                                 <div class="price-btn-block"> <span class="price">$ 21,19</span> <a href="profile.html" class="btn theme-btn-dash pull-right">Order Now</a> </div>
                             </div>
-                            <div class="restaurant-block">
-                                <div class="left">
-                                    <a class="pull-left" href="#"> <img src="http://placehold.it/50x46" alt="Restaurant logo"> </a>
-                                    <div class="pull-left right-text"> <a href="#">Chicken Restaurant</a> <span>68 5th Avenue New York</span> </div>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                     <!-- Each popular food item starts -->
@@ -238,12 +161,7 @@
                                 <div class="product-name">Fried Chicken with cheese</div>
                                 <div class="price-btn-block"> <span class="price">$ 21,19</span> <a href="profile.html" class="btn theme-btn-dash pull-right">Order Now</a> </div>
                             </div>
-                            <div class="restaurant-block">
-                                <div class="left">
-                                    <a class="pull-left" href="#"> <img src="http://placehold.it/50x46" alt="Restaurant logo"> </a>
-                                    <div class="pull-left right-text"> <a href="#">Chicken Restaurant</a> <span>68 5th Avenue New York</span> </div>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                     <!-- Each popular food item starts -->
@@ -259,12 +177,7 @@
                                 <div class="product-name">Fried Chicken with cheese</div>
                                 <div class="price-btn-block"> <span class="price">$ 21,19</span> <a href="profile.html" class="btn theme-btn-dash pull-right">Order Now</a> </div>
                             </div>
-                            <div class="restaurant-block">
-                                <div class="left">
-                                    <a class="pull-left" href="#"> <img src="http://placehold.it/50x46" alt="Restaurant logo"> </a>
-                                    <div class="pull-left right-text"> <a href="#">Chicken Restaurant</a> <span>68 5th Avenue New York</span> </div>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                     <!-- Each popular food item starts -->

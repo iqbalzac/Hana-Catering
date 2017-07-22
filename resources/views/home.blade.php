@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- banner part starts -->
-<section class="hero bg-image" data-image-src="http://placehold.it/1670x680">
+<section class="hero bg-image" data-image-src="{{asset('images/home.jpg')}}">
     <div class="hero-inner">
         <div class="container text-center hero-text font-white">
             <h1>Order Delivery & Take-Out </h1>

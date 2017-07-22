@@ -12,11 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->to('beranda');
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/beranda', 'HomeController@index')->name('beranda');
 Route::get('/menu-satuan', 'SemuaMakananController@index');
 Route::get('/menu-paketan', 'MenuPaketanController@index');

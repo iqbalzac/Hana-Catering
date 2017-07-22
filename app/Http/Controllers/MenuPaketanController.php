@@ -13,7 +13,7 @@ class MenuPaketanController extends Controller
      */
     public function index()
     {
-
+        view()->share(['nav' => 'menu-paketan']);
 
         return view('paketan');
     }

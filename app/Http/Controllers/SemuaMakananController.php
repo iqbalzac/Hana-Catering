@@ -13,8 +13,8 @@ class SemuaMakananController extends Controller
      */
     public function index()
     {
-
-
+        view()->share(['nav' => 'menu-satuan']);
+        
         return view('makanan');
     }
 

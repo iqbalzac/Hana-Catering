@@ -2,10 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Menu;
 use Illuminate\Http\Request;
 
 class SemuaMakananController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->perPage = intval((\Request::get('per_page')) ?:6);
+        $this->sortBy = \Request::get('sort_by') ?: 'created_at';
+        $this->orderBy = (\Request::get('order_by') == 'asc') ? 'asc' : 'desc';
+        $this->paginateParams = array('per_page' => $this->perPage, 'sort_by' => $this->sortBy, 'order_by' => $this->orderBy);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -13,9 +23,23 @@ class SemuaMakananController extends Controller
      */
     public function index()
     {
-        view()->share(['nav' => 'menu-satuan']);
+        $sortOrder = \Request::get('sort_order_by');
         
-        return view('makanan');
+        if ($sortOrder) {
+            $sortOrder = explode('~', $sortOrder);
+            $this->sortBy = $sortOrder[0];
+            $this->orderBy = $sortOrder[1];
+            $this->paginateParams = array('per_page' => $this->perPage, 'sort_by' => $this->sortBy, 'order_by' => $this->orderBy);
+        }        
+
+        view()->share(['nav' => 'menu-satuan', 'sort_by' => $this->sortBy, 'order_by' => $this->orderBy]);
+
+        $makananList = Menu::whereJenis('satuan')
+                        ->orderBy($this->sortBy, $this->orderBy)
+                        ->paginate($this->perPage)
+                        ->appends($this->paginateParams);
+        
+        return view('makanan', compact('makananList'));
     }
 
     /**

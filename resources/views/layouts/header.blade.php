@@ -16,23 +16,8 @@
 	                    	<a class="dropdown-item {{ ($nav == 'menu-paketan') ? 'active' : '' }}" href="{{ url('menu-paketan') }}">Menu Paket</a>
 	                    </div>
 	                </li>
-	                <li class="nav-item dropdown">
-	                	<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Restaurants</a>
-	                    <div class="dropdown-menu">
-	                    	<a class="dropdown-item" href="restaurants.html">Search results</a>
-	                    	<a class="dropdown-item" href="profile.html">Profile page</a>
-	                    </div>
-	                </li>
-	                <li class="nav-item dropdown">
-	                	<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
-	                    <div class="dropdown-menu">
-	                    	<a class="dropdown-item" href="pricing.html">Pricing</a>
-	                    	<a class="dropdown-item" href="contact.html">Contact</a>
-	                    	<a class="dropdown-item" href="submition.html">Submit restaurant</a>
-	                    	<a class="dropdown-item" href="registration.html">Registration</a>
-	                        <div class="dropdown-divider"></div>
-	                        <a class="dropdown-item" href="checkout.html">Checkout</a>
-	                    </div>
+	                <li class="nav-item">
+	                	<a class="nav-link {{ ($nav == 'keranjang-belanja') ? 'active' : '' }}" href="{{ url('/keranjang-belanja') }}"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a> 
 	                </li>
 	            </ul>
 	        </div>

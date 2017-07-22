@@ -17,7 +17,7 @@
 	                    </div>
 	                </li>
 	                <li class="nav-item">
-	                	<a class="nav-link {{ ($nav == 'keranjang-belanja') ? 'active' : '' }}" href="{{ url('/keranjang-belanja') }}"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a> 
+	                	<a class="nav-link {{ ($nav == 'pesanan') ? 'active' : '' }}" href="{{ url('/pesanan') }}"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a> 
 	                </li>
 	            </ul>
 	        </div>

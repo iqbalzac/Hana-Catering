@@ -10,10 +10,10 @@
     <div class="result-show">
     <div class="container">
         <div class="row">
-            <div class="col-sm-3">
+            <div class="col-sm-4">
                 <p>Tersedia total <span class="primary-color"><strong>{{ $makananList->total() }}</strong></span> menu paket makanan</div>
             </p>
-            <div class="col-sm-9">
+            <div class="col-sm-8">
                 <form id="sortOrder" method="get" action="">
                     <select onChange="document.forms['sortOrder'].submit();" class="custom-select pull-right" name="sort_order_by">
                         <option value="harga~asc" {{ ($sort_by == 'harga' && $order_by == 'asc') ? 'selected' : '' }}>Harga (murah - mahal)</option>

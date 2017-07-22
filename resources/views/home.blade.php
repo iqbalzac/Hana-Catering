@@ -2,19 +2,23 @@
 
 @section('content')
 <!-- banner part starts -->
-<section class="hero bg-image" data-image-src="{{asset('images/home.')}}">
+<section class="hero bg-image" data-image-src="{{asset('images/home.jpg')}}">
     <div class="hero-inner">
         <div class="container text-center hero-text font-white">
-            <h1>a Wonderful Course by Hana Catering </h1>
+            <h1>a Wonderful Course by Hana Catering</h1>
             <h5 class="font-white space-xs">Find restaurants, specials, and coupons for free</h5>
             <div class="banner-form">
-                <form class="form-inline">
+                <form class="form-inline" method="post">
+                    {{ csrf_field() }}
                     <div class="form-group">
-                        <label class="sr-only" for="exampleInputAmount">I would like to eat....</label>
+                        <label class="sr-only" for="exampleInputAmount">Saya ingin makan....</label>
                         <div class="form-group">
-                            <input type="text" class="form-control form-control-lg" id="exampleInputAmount" placeholder="I would like to eat...."> </div>
+                            <input type="text" name="keyword" class="form-control form-control-lg" id="exampleInputAmount" placeholder="Saya ingin makan...."> </div>
                     </div>
-                    <button onclick="location.href='restaurants.html'" type="button" class="btn theme-btn btn-lg">Search food</button>
+                    <button type="submit" class="btn theme-btn btn-lg">Cari</button>
+                    @if($errors->any())
+                    <h5 style="color:white;margin-top:10px;">{{$errors->first()}}</h5>
+                    @endif
                 </form>
             </div>
             <div class="steps">
@@ -61,55 +65,21 @@
         </div>
         <div class="row">
             <!-- Each popular food item starts -->
+            @foreach ($randomMenu as $makanan)
             <div class="col-xs-12 col-sm-6 col-md-4 food-item">
                 <div class="food-item-wrap">
-                    <div class="figure-wrap bg-image" data-image-src="http://placehold.it/380x210">
-                        <div class="distance"><i class="fa fa-pin"></i>1240m</div>
-                        <div class="rating pull-left"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </div>
-                        <div class="review pull-right"><a href="#">198 reviews</a> </div>
+                    <div class="figure-wrap bg-image" data-image-src="{{ asset('contents/' . $makanan->gambar) }}">
+                        
                     </div>
                     <div class="content">
-                        <h5><a href="profile.html">The South"s Best Fried Chicken</a></h5>
-                        <div class="product-name">Fried Chicken with cheese</div>
-                        <div class="price-btn-block"> <span class="price">$ 15,99</span> <a href="#" class="btn theme-btn-dash pull-right">Order Now</a> </div>
+                        <h5><a href="#">{{ ucwords($makanan->nama_menu) }}</a></h5>
+                        <div class="product-name">{{ ucwords($makanan->jenis) }}</div>
+                        <div class="price-btn-block"> <span class="price">Rp. {{ number_format($makanan->harga, 0, ',', '.') }}</span> <a href="#" class="btn theme-btn-dash pull-right">Pesan</a> </div>
                     </div>
                     
                 </div>
             </div>
-            <!-- Each popular food item starts -->
-            <!-- Each popular food item starts -->
-            <div class="col-xs-12 col-sm-6 col-md-4 food-item">
-                <div class="food-item-wrap">
-                    <div class="figure-wrap bg-image" data-image-src="http://placehold.it/380x210">
-                        <div class="distance"><i class="fa fa-pin"></i>1240m</div>
-                        <div class="rating pull-left"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </div>
-                        <div class="review pull-right"><a href="#">198 reviews</a> </div>
-                    </div>
-                    <div class="content">
-                        <h5><a href="profile.html">The South"s Best Fried Chicken</a></h5>
-                        <div class="product-name">Fried Chicken with cheese</div>
-                        <div class="price-btn-block"> <span class="price">$ 18,49</span> <a href="#" class="btn theme-btn-dash pull-right">Order Now</a> </div>
-                    </div>
-                    
-                </div>
-            </div>
-            <!-- Each popular food item starts -->
-            <!-- Each popular food item starts -->
-            <div class="col-xs-12 col-sm-6 col-md-4 food-item">
-                <div class="food-item-wrap">
-                    <div class="figure-wrap bg-image" data-image-src="http://placehold.it/380x210">
-                        <div class="distance"><i class="fa fa-pin"></i>1240m</div>
-                        <div class="rating pull-left"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </div>
-                        <div class="review pull-right"><a href="#">198 reviews</a> </div>
-                    </div>
-                    <div class="content">
-                        <h5><a href="profile.html">The South"s Best Fried Chicken</a></h5>
-                        <div class="product-name">Fried Chicken with cheese</div>
-                        <div class="price-btn-block"> <span class="price">$ 21,19</span> <a href="#" class="btn theme-btn-dash pull-right">Order Now</a> </div>
-                    </div>
-                    
-                </div>
-            </div>
+            @endforeach
             <!-- Each popular food item starts -->
         </div>
     </div>

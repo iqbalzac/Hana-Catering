@@ -9,6 +9,7 @@ class MenuPaketanController extends Controller
 {
     public function __construct()
     {
+        $this->keyword = (\Request::get('keyword')) ?:null;
         $this->perPage = intval((\Request::get('per_page')) ?:12);
         $this->sortBy = \Request::get('sort_by') ?: 'created_at';
         $this->orderBy = (\Request::get('order_by') == 'asc') ? 'asc' : 'desc';
@@ -22,8 +23,14 @@ class MenuPaketanController extends Controller
      */
     public function index()
     {
-        $sortOrder = \Request::get('sort_order_by');
+        $makananList = Menu::whereJenis('paketan');
         
+        if ($this->keyword) {
+            $makananList = $makananList->where('nama_menu', 'like', '%' . $this->keyword . '%');
+        }
+
+        $sortOrder = \Request::get('sort_order_by');
+
         if ($sortOrder) {
             $sortOrder = explode('~', $sortOrder);
             $this->sortBy = $sortOrder[0];
@@ -33,8 +40,7 @@ class MenuPaketanController extends Controller
 
         view()->share(['nav' => 'menu-paketan', 'sort_by' => $this->sortBy, 'order_by' => $this->orderBy]);
 
-        $makananList = Menu::whereJenis('paketan')
-                        ->orderBy($this->sortBy, $this->orderBy)
+        $makananList = $makananList->orderBy($this->sortBy, $this->orderBy)
                         ->paginate($this->perPage)
                         ->appends($this->paginateParams);
 

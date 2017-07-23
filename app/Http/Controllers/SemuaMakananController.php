@@ -11,7 +11,7 @@ class SemuaMakananController extends Controller
     public function __construct()
     {
         $this->keyword = (\Request::get('keyword')) ?:null;
-        $this->perPage = intval((\Request::get('per_page')) ?:9);
+        $this->perPage = intval((\Request::get('per_page')) ?:6);
         $this->sortBy = \Request::get('sort_by') ?: 'created_at';
         $this->orderBy = (\Request::get('order_by') == 'asc') ? 'asc' : 'desc';
         $this->paginateParams = array('per_page' => $this->perPage, 'sort_by' => $this->sortBy, 'order_by' => $this->orderBy);

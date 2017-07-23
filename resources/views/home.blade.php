@@ -83,7 +83,7 @@
 <section class="how-it-works">
     <div class="container">
         <div class="text-xs-center">
-            <h2>Easy 3 Step Order</h2>
+            <h2>3 Langkah Mudah Melakukan Pemesanan</h2>
             <!-- 3 block sections starts -->
             <div class="row how-it-works-solution">
                 <div class="col-xs-12 col-sm-12 col-md-4 how-it-works-steps white-txt col1">
@@ -93,7 +93,7 @@
                                 <img src="{{ asset('images/chicken.svg') }}" width="34" height="34">
                             </div>
                             <h3>Pilih menunya</h3>
-                            <p>We"ve got your covered with menus from over 345 delivery restaurants online.</p>
+                            <p>Temukan menu favorit anda disini</p>
                         </div>
                     </div>
                 </div>
@@ -106,16 +106,15 @@
                             </svg>
                         </div>
                         <h3>Pesan makanannya</h3>
-                        <p>We"ve got your covered with menus from over 345 delivery restaurants online.</p>
+                        <p>Dengan mudah makanan yang dipesan akan segera anda dapatkan</p>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-4 how-it-works-steps white-txt col3">
                     <div class="step step-3">
-                        <div class="icon" data-step="3">
                             <img src="{{ asset('images/restaurant-menu.svg') }}" width="34" height="34">
                         </div>
                         <h3>Pesanan kami proses</h3>
-                        <p>Get your food delivered! And enjoy your meal! Pay online on pickup or delivery</p>
+                        <p>Pesanan anda akan kami antar sesuai waktu yang ditentukan</p>
                     </div>
                 </div>
             </div>
@@ -123,252 +122,12 @@
         <!-- 3 block sections ends -->
         <div class="row">
             <div class="col-sm-12 text-center">
-                <p class="pay-info">Pay by Cash on delivery , Card or Paypal</p>
+                <p class="pay-info">Kontak kami untuk melakukan proses pembayaran</p>
             </div>
         </div>
     </div>
 </section>
 <!-- How it works block ends -->
 <!-- Featured restaurants starts -->
-<section class="featured-restaurants">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4">
-                <div class="title-block pull-left">
-                    <h4>Featured restaurants</h4> </div>
-            </div>
-            <div class="col-sm-8">
-                <!-- restaurants filter nav starts -->
-                <div class="restaurants-filter pull-right">
-                    <nav class="primary pull-left">
-                        <ul>
-                            <li><a href="#" class="selected" data-filter="*">Grill</a> </li>
-                            <li><a href="#" data-filter=".pizza">Pizza</a> </li>
-                            <li><a href="#" data-filter=".pasta">Pasta</a> </li>
-                            <li><a href="#" data-filter=".thaifood">thai food</a> </li>
-                            <li><a href="#" data-filter=".fish">fish</a> </li>
-                        </ul>
-                    </nav>
-                </div>
-                <!-- restaurants filter nav ends -->
-            </div>
-        </div>
-        <!-- restaurants listing starts -->
-        <div class="row">
-            <div class="restaurant-listing">
-                <div class="col-xs-12 col-sm-12 col-md-6 single-restaurant grill fish thaifood pizza">
-                    <div class="restaurant-wrap">
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-3 col-md-12 col-lg-3 text-xs-center">
-                                <a class="restaurant-logo" href="#"> <img src="http://placehold.it/95x95" alt="Restaurant logo"> </a>
-                            </div>
-                            <!--end:col -->
-                            <div class="col-xs-12 col-sm-9 col-md-12 col-lg-9">
-                                <h5><a href="profile.html">Maenaam Thai Restaurant</a></h5> <span>Burgers, American, Sandwiches, Fast Food, BBQ</span>
-                                <div class="bottom-part">
-                                    <div class="cost"><i class="fa fa-check"></i> Min $ 10,00</div>
-                                    <div class="mins"><i class="fa fa-motorcycle"></i> 30 min</div>
-                                    <div class="ratings"> <span>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </span> (122) </div>
-                                </div>
-                            </div>
-                            <!-- end:col -->
-                        </div>
-                        <!-- end:row -->
-                    </div>
-                    <!--end:Restaurant wrap -->
-                </div>
-                <!--end: col -->
-                <div class="col-xs-12 col-sm-12 col-md-6 single-restaurant grill fish pasta thaifood">
-                    <div class="restaurant-wrap">
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-3 col-md-12 col-lg-3 text-xs-center">
-                                <a class="restaurant-logo" href="#"> <img src="http://placehold.it/95x95" alt="Restaurant logo"> </a>
-                            </div>
-                            <!--end:col -->
-                            <div class="col-xs-12 col-sm-9 col-md-12 col-lg-9">
-                                <h5><a href="profile.html">Maenaam Thai Restaurant</a></h5> <span>Burgers, American, Sandwiches, Fast Food, BBQ</span>
-                                <div class="bottom-part">
-                                    <div class="cost"><i class="fa fa-check"></i> Min $ 10,00</div>
-                                    <div class="mins"><i class="fa fa-motorcycle"></i> 30 min</div>
-                                    <div class="ratings"> <span>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </span> (122) </div>
-                                </div>
-                            </div>
-                            <!-- end:col -->
-                        </div>
-                        <!-- end:row -->
-                    </div>
-                    <!--end:Restaurant wrap -->
-                </div>
-                <!--end: col -->
-                <div class="col-xs-12 col-sm-12 col-md-6 single-restaurant grill thaifood pasta pizza">
-                    <div class="restaurant-wrap">
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-3 col-md-12 col-lg-3 text-xs-center">
-                                <a class="restaurant-logo" href="#"> <img src="http://placehold.it/95x95" alt="Restaurant logo"> </a>
-                            </div>
-                            <!--end:col -->
-                            <div class="col-xs-12 col-sm-9 col-md-12 col-lg-9">
-                                <h5><a href="profile.html">Maenaam Thai Restaurant</a></h5> <span>Burgers, American, Sandwiches, Fast Food, BBQ</span>
-                                <div class="bottom-part">
-                                    <div class="cost"><i class="fa fa-check"></i> Min $ 10,00</div>
-                                    <div class="mins"><i class="fa fa-motorcycle"></i> 30 min</div>
-                                    <div class="ratings"> <span>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-o"></i>
-                                    <i class="fa fa-star-o"></i>
-                                </span> (122) </div>
-                                </div>
-                            </div>
-                            <!-- end:col -->
-                        </div>
-                        <!-- end:row -->
-                    </div>
-                    <!--end:Restaurant wrap -->
-                </div>
-                <!--end: col -->
-                <div class="col-xs-12 col-sm-12 col-md-6 single-restaurant thaifood fish pasta">
-                    <div class="restaurant-wrap">
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-3 col-md-12 col-lg-3 text-xs-center">
-                                <a class="restaurant-logo" href="#"> <img src="http://placehold.it/95x95" alt="Restaurant logo"> </a>
-                            </div>
-                            <!--end:col -->
-                            <div class="col-xs-12 col-sm-9 col-md-12 col-lg-9">
-                                <h5><a href="profile.html">Maenaam Thai Restaurant</a></h5> <span>Burgers, American, Sandwiches, Fast Food, BBQ</span>
-                                <div class="bottom-part">
-                                    <div class="cost"><i class="fa fa-check"></i> Min $ 10,00</div>
-                                    <div class="mins"><i class="fa fa-motorcycle"></i> 30 min</div>
-                                    <div class="ratings"> <span>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-o"></i>
-                                </span> (122) </div>
-                                </div>
-                            </div>
-                            <!-- end:col -->
-                        </div>
-                        <!-- end:row -->
-                    </div>
-                    <!--end:Restaurant wrap -->
-                </div>
-                <!--end: col -->
-                <div class="col-xs-12 col-sm-12 col-md-6 single-restaurant grill fish thaifood pasta pizza">
-                    <div class="restaurant-wrap">
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-3 col-md-12 col-lg-3 text-xs-center">
-                                <a class="restaurant-logo" href="#"> <img src="http://placehold.it/95x95" alt="Restaurant logo"> </a>
-                            </div>
-                            <!--end:col -->
-                            <div class="col-xs-12 col-sm-9 col-md-12 col-lg-9">
-                                <h5><a href="profile.html">Maenaam Thai Restaurant</a></h5> <span>Burgers, American, Sandwiches, Fast Food, BBQ</span>
-                                <div class="bottom-part">
-                                    <div class="cost"><i class="fa fa-check"></i> Min $ 10,00</div>
-                                    <div class="mins"><i class="fa fa-motorcycle"></i> 30 min</div>
-                                    <div class="ratings"> <span>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-o"></i>
-                                </span> (122) </div>
-                                </div>
-                            </div>
-                            <!-- end:col -->
-                        </div>
-                        <!-- end:row -->
-                    </div>
-                    <!--end:Restaurant wrap -->
-                </div>
-                <!--end: col -->
-                <div class="col-xs-12 col-sm-12 col-md-6 single-restaurant grill pasta pizza">
-                    <div class="restaurant-wrap">
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-3 col-md-12 col-lg-3 text-xs-center">
-                                <a class="restaurant-logo" href="#"> <img src="http://placehold.it/95x95" alt="Restaurant logo"> </a>
-                            </div>
-                            <!--end:col -->
-                            <div class="col-xs-12 col-sm-9 col-md-12 col-lg-9">
-                                <h5><a href="profile.html">Maenaam Thai Restaurant</a></h5> <span>Burgers, American, Sandwiches, Fast Food, BBQ</span>
-                                <div class="bottom-part">
-                                    <div class="cost"><i class="fa fa-check"></i> Min $ 10,00</div>
-                                    <div class="mins"><i class="fa fa-motorcycle"></i> 30 min</div>
-                                    <div class="ratings"> <span>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-o"></i>
-                                </span> (122) </div>
-                                </div>
-                            </div>
-                            <!-- end:col -->
-                        </div>
-                        <!-- end:row -->
-                    </div>
-                    <!--end:Restaurant wrap -->
-                </div>
-                <!--end: col -->
-            </div>
-        </div>
-        <!-- restaurants listing ends -->
-        <!-- add restaurant starts -->
-        <section class="add-restaurants">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-3 add-title">
-                        <h4>Add Your Restaurant</h4> </div>
-                    <div class="col-xs-12 col-sm-5 join-text">
-                        <p>Join the thousands of other restaurants who benefit from having their menus on <a href="#"><strong> FoodPicky directory</strong></a> </p>
-                    </div>
-                    <div class="col-xs-12 col-sm-4 join-btn text-xs-right"><a href="#" class="btn theme-btn btn-lg">I‘m restaurant</a> </div>
-                </div>
-            </div>
-        </section>
-        <!-- add restaurant ends -->
-    </div>
-</section>
-<!-- Featured restaurants ends -->
-<section class="app-section">
-    <div class="app-wrap">
-        <div class="container">
-            <div class="row text-img-block text-xs-left">
-                <div class="container">
-                    <div class="col-xs-12 col-sm-5 right-image text-center">
-                        <figure> <img src="images/app.png" alt="Right Image" class="img-fluid"> </figure>
-                    </div>
-                    <div class="col-xs-12 col-sm-7 left-text">
-                        <h3>The Best Food Delivery App</h3>
-                        <p>Now you can make food happen pretty much wherever you are thanks to the free easy-to-use Food Delivery &amp; Takeout App.</p>
-                        <div class="social-btns">
-                            <a href="#" class="app-btn apple-button clearfix">
-                                <div class="pull-left"><i class="fa fa-apple"></i> </div>
-                                <div class="pull-right"> <span class="text">Available on the</span> <span class="text-2">App Store</span> </div>
-                            </a>
-                            <a href="#" class="app-btn android-button clearfix">
-                                <div class="pull-left"><i class="fa fa-android"></i> </div>
-                                <div class="pull-right"> <span class="text">Available on the</span> <span class="text-2">Play store</span> </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+
 @endsection

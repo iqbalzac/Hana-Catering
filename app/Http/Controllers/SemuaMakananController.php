@@ -26,17 +26,18 @@ class SemuaMakananController extends Controller
     {
         $makananList = Menu::whereJenis('satuan');
         
-        if ($this->keyword) {
-            $makananList = $makananList->where('nama_menu', 'like', '%' . $this->keyword . '%');
-        }
-
         $sortOrder = \Request::get('sort_order_by');
-
+        
         if ($sortOrder) {
             $sortOrder = explode('~', $sortOrder);
             $this->sortBy = $sortOrder[0];
             $this->orderBy = $sortOrder[1];
             $this->paginateParams = array('per_page' => $this->perPage, 'sort_by' => $this->sortBy, 'order_by' => $this->orderBy);
+        } 
+
+        if ($this->keyword) {
+            $makananList = $makananList->where('nama_menu', 'like', '%' . $this->keyword . '%');
+            $this->paginateParams['keyword'] = $this->keyword;
         }        
 
         view()->share(['nav' => 'menu-satuan', 'sort_by' => $this->sortBy, 'order_by' => $this->orderBy]);

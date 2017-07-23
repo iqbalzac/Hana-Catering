@@ -27,8 +27,9 @@ class HomeController extends Controller
         view()->share(['nav' => 'beranda']);
 
         $randomMenu = Menu::inRandomOrder()->limit(3)->get();
+        $totalMenu = Menu::count();
 
-        return view('home', compact('randomMenu'));
+        return view('home', compact('randomMenu', 'totalMenu'));
     }
 
     public function store(Request $request)

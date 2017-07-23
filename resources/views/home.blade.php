@@ -54,8 +54,8 @@
 <section class="popular">
     <div class="container">
         <div class="title text-xs-center m-b-30">
-            <h2>Popular This Month In Your City</h2>
-            <p class="lead">The easiest way to your favourite food</p>
+            <h2>Banyak Menu Menarik yang Tersedia</h2>
+            <p class="lead">Cara Mudah Untuk Mendapatkan Makanan Favorit Anda</p>
         </div>
         <div class="row">
             <!-- Each popular food item starts -->

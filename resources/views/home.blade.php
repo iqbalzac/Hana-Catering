@@ -6,7 +6,7 @@
     <div class="hero-inner">
         <div class="container text-center hero-text font-white">
             <h1>a Wonderful Course by Hana Catering</h1>
-            <h5 class="font-white space-xs">Find restaurants, specials, and coupons for free</h5>
+            <h5 class="font-white space-xs">Temukan Kelezatan Disetiap Masakan</h5>
             <div class="banner-form">
                 <form class="form-inline" method="post">
                     {{ csrf_field() }}

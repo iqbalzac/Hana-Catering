@@ -21,4 +21,5 @@ Route::get('/beranda', 'HomeController@index')->name('beranda');
 Route::post('/beranda', 'HomeController@store');
 Route::get('/menu-satuan', 'SemuaMakananController@index');
 Route::get('/menu-paketan', 'MenuPaketanController@index');
-Route::get('/pesanan', 'PesananController@index');
+Route::get('/pesanan/{id}/batal', 'PesananController@cancel');
+Route::resource('/pesanan', 'PesananController');

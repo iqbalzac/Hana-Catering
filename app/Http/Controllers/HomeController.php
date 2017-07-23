@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\SearchRequest;
 use App\Menu;
 use Illuminate\Http\Request;
 
@@ -32,7 +33,7 @@ class HomeController extends Controller
         return view('home', compact('randomMenu', 'totalMenu'));
     }
 
-    public function store(Request $request)
+    public function store(SearchRequest $request)
     {
         $cariMakanan = Menu::where('nama_menu', 'like', '%' . $request->keyword . '%')->orderBy('created_at', 'desc')->first();
 

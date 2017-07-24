@@ -12,7 +12,8 @@
                 <div class="clearfix"></div>
             </div>
             <div class="widget-body">
-                <form method="post" action="#">
+                <form method="post" action="{{ url('ringkasan') }}">
+                    {{ csrf_field() }}
                     <div class="row">
                         <div class="col-sm-6 margin-b-30">
                             <div class="row">
@@ -77,9 +78,20 @@
                                     </table>
                                 </div>
                             </div>
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
                             <!--cart summary-->
                             <div class="payment-option">
-                                <p class="text-xs-center"> <a href="#" class="btn btn-outline-success btn-block">Proses Pemesanan</a> </p>
+                                <p class="text-xs-center">
+                                    <button type="sumbit" class="btn btn-outline-success btn-block">Proses Pemesanan</button>
+                                </p>
                             </div>
                         </div>
                     </div>

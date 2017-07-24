@@ -115,7 +115,7 @@
                                     </div>
                                 @endif
 
-                                @if(isset($pesanan))
+                                @if(isset($pesanan) == true && count($pesanan->detailPesanan) > 0)
                                 <div class="widget-body">
                                     <div class="price-wrap text-xs-center">
                                         <p>TOTAL</p>

@@ -16,7 +16,7 @@ class InvoiceController extends Controller
     {
         $sessionPesanan = session('pesanan');
 
-        if (!$sessionPesanan && !isset($sessionPesanan->detailPesanan))
+        if (isset($sessionPesanan) == false || count($sessionPesanan->detailPesanan) == 0)
             return redirect()->back()->withErrors(['Maaf, pesanan Anda tidak ditemukan, silahkan melakukan pemesanan ulang']);
 
         $pesanan = Order::with('detailPesanan')->find($sessionPesanan->id_psn);

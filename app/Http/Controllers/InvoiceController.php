@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\InvoiceRequest;
 use App\Order;
+use App\Pelanggan;
 use Illuminate\Http\Request;
 
 class InvoiceController extends Controller
@@ -43,7 +44,32 @@ class InvoiceController extends Controller
      */
     public function store(InvoiceRequest $request)
     {
-        //
+        $sessionPesanan = session('pesanan');
+
+        if (isset($sessionPesanan) == false || count($sessionPesanan->detailPesanan) == 0)
+            return redirect()->back()->withErrors(['Maaf, pesanan Anda tidak ditemukan, silahkan melakukan pemesanan ulang']);
+
+        $dataPelanggan = new Pelanggan;
+        $dataPelanggan->nama = $request->nama;
+        $dataPelanggan->no_hp = $request->handphone;
+        $dataPelanggan->alamat = $request->alamat . ', ' . $request->kota . ', ' . $request->kode_pos;
+        $dataPelanggan->email = $request->email;
+
+        if (!$dataPelanggan->save())
+            return redirect()->back()->withErrors(['Maaf, terjadi kesalahan sistem, silahkan coba melakukan pemesanan kembali']);
+        
+        $updatePesanan = Order::with('detailPesanan.menu')->find($sessionPesanan->id_psn);
+        $updatePesanan->id_plg = $dataPelanggan->id;
+
+        if (!$updatePesanan->save())
+            return redirect()->back()->withErrors(['Maaf, terjadi kesalahan sistem, silahkan coba melakukan pemesanan kembali']);
+        
+        $updatePesanan->pelanggan;
+        event(new \App\Events\Pesanan($updatePesanan));
+
+        session()->forget('pesanan');
+
+        return redirect()->to('beranda');
     }
 
     /**

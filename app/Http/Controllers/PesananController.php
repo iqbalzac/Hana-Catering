@@ -84,7 +84,7 @@ class PesananController extends Controller
             $detail->save();
             
             $updatePesanan = Order::with('detailPesanan')->find($sessionPesanan->id_psn);
-            $updatePesanan->total_psn = $updatePesanan->total_psn + $detail->tota_hrg;
+            $updatePesanan->total_psn = $updatePesanan->total_psn + $pesan->harga;
 
             if ($updatePesanan->save()) session(['pesanan' => $updatePesanan]);
             

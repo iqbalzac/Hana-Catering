@@ -70,6 +70,8 @@
                                     <div class="clearfix"></div>
                                 </div>
 
+                                <form method="post" action="{{ url('pesanan') }}">
+                                {{ csrf_field() }}
                                 @if(isset($pesanan))
                                     @forelse ($pesanan->detailPesanan as $order)
                                     <div class="order-row bg-white">
@@ -113,7 +115,7 @@
                                     </div>
                                 @endif
 
-                                @if(isset($pesanan))
+                                @if(isset($pesanan) == true && count($pesanan->detailPesanan) > 0)
                                 <div class="widget-body">
                                     <div class="price-wrap text-xs-center">
                                         <p>TOTAL</p>
@@ -122,6 +124,7 @@
                                     </div>
                                 </div>
                                 @endif
+                                </form>
                             </div>
                         </div>
                     </div>

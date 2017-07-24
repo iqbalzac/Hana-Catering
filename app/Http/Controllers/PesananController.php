@@ -52,7 +52,7 @@ class PesananController extends Controller
      */
     public function store(PesananRequest $request)
     {
-        //
+        return redirect()->to('ringkasan');
     }
 
     /**
@@ -73,6 +73,7 @@ class PesananController extends Controller
             
             if ($pesananSama) {
                 $detail->jumlah = $detail->jumlah + 1;
+                $detail->tota_hrg = $detail->tota_hrg + $pesan->harga;
             } else {
                 $detail->id_psn = $sessionPesanan->id_psn;
                 $detail->menu_id = $pesan->id;
@@ -83,7 +84,7 @@ class PesananController extends Controller
             $detail->save();
             
             $updatePesanan = Order::with('detailPesanan')->find($sessionPesanan->id_psn);
-            $updatePesanan->total_psn = $updatePesanan->total_psn + $detail->tota_hrg;
+            $updatePesanan->total_psn = $updatePesanan->total_psn + $pesan->harga;
 
             if ($updatePesanan->save()) session(['pesanan' => $updatePesanan]);
             
@@ -108,8 +109,6 @@ class PesananController extends Controller
                 }
             }
         }
-        
-        
 
         return redirect()->to('/pesanan');
     }
@@ -168,6 +167,6 @@ class PesananController extends Controller
             }
         }
 
-        return redirect()->to('/');
+        return redirect()->back()->withErrors(['Maaf, pesanan Anda tidak ditemukan, silahkan melakukan pemesanan ulang']);
     }
 }

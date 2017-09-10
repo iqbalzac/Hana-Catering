@@ -33,19 +33,19 @@
             </li>
             <li class="{{ current_page('menu-makanan') }}">
                 <a href="{{ admin_url('menu-makanan') }}">
-                    <i class="material-icons">home</i>
+                    <i class="material-icons">local_dining</i>
                     <span>Menu Makanan</span>
                 </a>
             </li>
             <li class="{{ current_page('pelanggan') }}">
                 <a href="{{ admin_url('pelanggan') }}">
-                    <i class="material-icons">home</i>
+                    <i class="material-icons">face</i>
                     <span>Pelanggan</span>
                 </a>
             </li>
             <li class="{{ current_page('penjualan') }}">
                 <a href="{{ admin_url('penjualan') }}">
-                    <i class="material-icons">home</i>
+                    <i class="material-icons">shopping_basket</i>
                     <span>Penjualan</span>
                 </a>
             </li>

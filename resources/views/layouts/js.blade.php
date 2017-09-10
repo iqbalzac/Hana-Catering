@@ -8,3 +8,6 @@
 <script src="{{ asset('js/jquery.isotope.min.js') }}"></script>
 <script src="{{ asset('js/headroom.js') }}"></script>
 <script src="{{ asset('js/foodpicky.min.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.25/vue.js"></script>
+
+@stack('scripts')

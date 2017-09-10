@@ -52,6 +52,21 @@ class PesananController extends Controller
      */
     public function store(PesananRequest $request)
     {
+        $sessionPesanan = session('pesanan');
+        $pesanan = Order::with('detailPesanan')->find($sessionPesanan->id_psn);
+
+        $pesanan->total_psn = $request->total_harga;
+
+        $details = $pesanan->detailPesanan;
+        $perItems = $request->per_item;
+
+        foreach ($request->quantity as $key => $qty) {
+            $pesanan->detailPesanan[$key]->jumlah = $qty;
+            $pesanan->detailPesanan[$key]->tota_hrg = $perItems[$key] * $qty;
+        }
+
+        $pesanan->push();
+        
         return redirect()->to('ringkasan');
     }
 
@@ -85,7 +100,7 @@ class PesananController extends Controller
             
             $updatePesanan = Order::with('detailPesanan')->find($sessionPesanan->id_psn);
             $updatePesanan->total_psn = $updatePesanan->total_psn + $pesan->harga;
-
+            $updatePesanan->detailPesanan;
             if ($updatePesanan->save()) session(['pesanan' => $updatePesanan]);
             
         
@@ -105,6 +120,8 @@ class PesananController extends Controller
                 if ($detail->save()) {
                     $pesanan->total_psn = $detail->tota_hrg;
                     $pesanan->save();
+
+                    $pesanan->detailPesanan;
                     session(['pesanan' => $pesanan]);
                 }
             }

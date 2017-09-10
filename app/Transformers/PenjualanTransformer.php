@@ -17,10 +17,12 @@ class PenjualanTransformer extends TransformerAbstract
         $detailPesanan = $penjualan->detailPesanan;
         $formatPesanan = "";
 
-        foreach ($detailPesanan as $key => $pesanan) {
-            $formatPesanan .= '- '.ucwords($pesanan->menu->nama_menu);
-            $formatPesanan .= ' ('.$pesanan->jumlah.' porsi x @Rp. '.number_format($pesanan->menu->harga, 0, ',', '.').')';
-            $formatPesanan .= ' = Rp. '.number_format($pesanan->tota_hrg, 0, ',', '.').'<br>';
+        if (isset($detailPesanan)) {
+            foreach ($detailPesanan as $key => $pesanan) {
+                $formatPesanan .= '- '. (isset($pesanan->menu->nama_menu) ? ucwords($pesanan->menu->nama_menu) : '');
+                $formatPesanan .= ' ('.$pesanan->jumlah.' porsi x @Rp. '. (isset($pesanan->menu) ? number_format($pesanan->menu->harga, 0, ',', '.') : '0') .')';
+                $formatPesanan .= ' = Rp. '.number_format($pesanan->tota_hrg, 0, ',', '.').'<br>';
+            }
         }
 
 

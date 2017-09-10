@@ -43,6 +43,12 @@
                     <span>Pelanggan</span>
                 </a>
             </li>
+            <li class="{{ current_page('penjualan') }}">
+                <a href="{{ admin_url('penjualan') }}">
+                    <i class="material-icons">home</i>
+                    <span>Penjualan</span>
+                </a>
+            </li>
         </ul>
     </div>
     <!-- #Menu -->

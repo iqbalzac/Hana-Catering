@@ -31,4 +31,7 @@ Route::group(['prefix' => env('ADMIN_URL', 'admin-cms'), 'middleware' => ['admin
 
 	Route::get('/pelanggan/ajax',  ['uses' => 'Admin\PelangganController@getData', 'as' => 'pelanggan.ajax']);
 	Route::resource('pelanggan', 'Admin\PelangganController');
+
+	Route::get('/penjualan/ajax',  ['uses' => 'Admin\PenjualanController@getData', 'as' => 'penjualan.ajax']);
+	Route::resource('penjualan', 'Admin\PenjualanController');
 });

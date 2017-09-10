@@ -24,3 +24,8 @@ Route::get('/menu-paketan', 'MenuPaketanController@index');
 Route::get('/pesanan/{id}/batal', 'PesananController@cancel');
 Route::resource('/pesanan', 'PesananController');
 Route::resource('/ringkasan', 'InvoiceController');
+
+Route::group(['prefix' => env('ADMIN_URL', 'admin-cms'), 'middleware' => ['admin.auth']], function() {
+	Route::get('/menu-makanan/ajax',  ['uses' => 'Admin\MenuMakananController@getData', 'as' => 'menu-makanan.ajax']);
+	Route::resource('menu-makanan', 'Admin\MenuMakananController');
+});

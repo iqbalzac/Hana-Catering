@@ -3,13 +3,11 @@
 @section('content')
     <div class="panel panel-default">
         <div class="panel-heading" style="min-height: 65px;">
-            <h4 class="pull-left">{{ ucwords($pageTitle) }}</h4>
+            <h4 class="pull-left">{!! ucwords($pageTitle) !!}</h4>
             <a href="javascript:history.back()" class="btn btn-default pull-right"><i class="glyphicon glyphicon-chevron-left"></i>Back</a>
         </div>
         <div class="panel-body">
             {!! Form::model($query, ['url' => $url, 'method' => $method, 'class' => 'p-md col-md-12', 'enctype' => 'multipart/form-data']) !!}
-
-                {{-- @include('admin.layouts.error_and_message') --}}
 
                 @foreach($fields as $field => $attr)
                     <?php
@@ -28,6 +26,10 @@
                         @elseif($type == 'password')
                             <input type="{{ $type }}" name="{{ $field }}" class="form-control" value="{{ ($query && $type != 'password') ? $query->$field : ''}}" {{ ($required == 'required') ? $required : '' }}>
                         @else
+                            @if($type == 'file' && $method != 'post')
+                                <br>
+                                <img height="200" src="{{ asset('contents/'.$query->{$field}) }}">
+                            @endif
                             <?php $ckeditor = ($type == 'textarea') ? 'ckeditor' : ''; ?>
                             {!! Form::{$type}($field, null, ['class' => 'form-control '.$ckeditor] + $isRequired) !!}
                         @endif

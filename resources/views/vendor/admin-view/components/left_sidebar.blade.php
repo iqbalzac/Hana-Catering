@@ -31,6 +31,12 @@
                     <span>Home</span>
                 </a>
             </li>
+            <li class="{{ current_page() }}">
+                <a href="{{ admin_url('menu-makanan') }}">
+                    <i class="material-icons">home</i>
+                    <span>Menu Makanan</span>
+                </a>
+            </li>
         </ul>
     </div>
     <!-- #Menu -->

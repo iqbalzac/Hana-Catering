@@ -31834,7 +31834,7 @@ $(function () {
         }
     });
 
-    initRealTimeChart();
+    // initRealTimeChart();
     initDonutChart();
     initSparkline();
 });

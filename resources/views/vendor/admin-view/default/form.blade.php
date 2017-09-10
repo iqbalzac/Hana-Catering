@@ -31,7 +31,10 @@
                                 <img height="200" src="{{ asset('contents/'.$query->{$field}) }}">
                             @endif
                             <?php $ckeditor = ($type == 'textarea') ? 'ckeditor' : ''; ?>
-                            {!! Form::{$type}($field, null, ['class' => 'form-control '.$ckeditor] + $isRequired) !!}
+                            {!! Form::{$type}($field, null, ['class' => 'form-control '.$ckeditor, 'id' => $field] + $isRequired) !!}
+                            @if ($ckeditor != '')
+                                @ckeditor($field)
+                            @endif
                         @endif
                     </div>
                 @endforeach

@@ -35,6 +35,7 @@
 	    
 	    <!-- Custom Js -->
 	    <script src="{{ admin_elixir('js/admin-custom.js') }}"></script>
+	    <script src="https://cdn.ckeditor.com/ckeditor5/0.11.0/classic/ckeditor.js"></script>
 
 	    @stack('custom_js')
 	</body>

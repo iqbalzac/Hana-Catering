@@ -171,6 +171,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         Yajra\Datatables\DatatablesServiceProvider::class,
         Spatie\Fractal\FractalServiceProvider::class,
+        JeroenNoten\LaravelCkEditor\ServiceProvider::class,
 
         /*
          * Application Service Providers...

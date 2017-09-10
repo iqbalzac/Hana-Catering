@@ -43,7 +43,10 @@
                             </div>
                             <div class="content">
                                 <h5><a href="#">{{ ucwords($makanan->nama_menu) }}</a></h5>
-                                <div class="product-name">{{ ucwords($makanan->jenis) }}</div>
+                                <div class="product-name" style="margin:0">{{ ucwords($makanan->jenis) }}</div>
+                                <div class="product-description" style="height: 50px;border-top: 2px dashed #f30;overflow: hidden;">
+                                    {!! ($makanan->detil)?:'---' !!}
+                                </div>
                                 <div class="price-btn-block">
                                     <span class="price">Rp. {{ number_format($makanan->harga, 0, ',', '.') }}</span>
                                     <a href="{{ url('pesanan/'. $makanan->id) }}" class="btn theme-btn-dash pull-right">Pesan</a> </div>

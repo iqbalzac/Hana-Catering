@@ -1,4 +1,4 @@
-    {
+{
     "name": "laravel/laravel",
     "description": "The Laravel Framework.",
     "keywords": ["framework", "laravel"],
@@ -6,11 +6,12 @@
     "type": "project",
     "require": {
         "php": ">=5.6.4",
+        "cendekia/laravel-admin-boilerplate": "v1.0.x-dev",
         "doctrine/dbal": "^2.6",
         "guzzlehttp/guzzle": "^6.3",
+        "jeroennoten/laravel-ckeditor": "^3.8",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
-        "cendekia/laravel-admin-boilerplate": "v1.0.x-dev",
         "spatie/laravel-fractal": "^4.01"
     },
     "require-dev": {

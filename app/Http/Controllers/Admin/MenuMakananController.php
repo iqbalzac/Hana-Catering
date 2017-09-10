@@ -28,6 +28,7 @@ class MenuMakananController extends AdminController
             'nama_menu' => 'text|required',
             'harga' => 'text|required',
             'jenis' => 'select|required|jenis|jenisMakanan',
+            'detil' => 'textarea',
         ];
 
         view()->share([
@@ -67,6 +68,7 @@ class MenuMakananController extends AdminController
         ];
 
         $this->editableFields['gambar'] = 'file|required';
+        $this->editableFields['detil'] = 'textarea';
 
         $formAttr = [
             'url' => $this->url,
@@ -84,7 +86,8 @@ class MenuMakananController extends AdminController
         $data->nama_menu = $request->nama_menu;
         $data->harga = $request->harga;
         $data->jenis = $request->jenis;
-        
+        $data->detil = $request->detil;
+
         // upload image
         $file = $request->file('gambar');
         $destinationPath = 'contents';
@@ -142,6 +145,7 @@ class MenuMakananController extends AdminController
         $data->nama_menu = $request->nama_menu;
         $data->harga = $request->harga;
         $data->jenis = $request->jenis;
+        $data->detil = $request->detil;
         
         // upload image
         if ($request->file('gambar')) {

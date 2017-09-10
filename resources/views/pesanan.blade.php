@@ -73,7 +73,7 @@
                         <form method="post" action="{{ url('pesanan') }}">
                         {{ csrf_field() }}
                         @if(isset($pesanan))
-                            @forelse ($pesanan->detailPesanan as $order)
+                            @forelse ($pesanan->detailPesanan as $key => $order)
                             <div class="order-row bg-white">
                                 <div class="widget-body">
                                     <div class="form-group row no-gutter">
@@ -81,7 +81,7 @@
                                             {{ ucwords($order->menu->nama_menu) }}
                                         </div>
                                         <div class="col-xs-2">
-                                            <input class="form-control" type="number" value="{{ $order->jumlah }}" id="example-number-input">
+                                            <input class="form-control" name="quantity[]" v-model="quantity_{{$key}}" type="number" value="{{ $order->jumlah }}" id="example-number-input">
                                         </div>
                                         <div class="col-xs-4">
                                             <input class="form-control" type="text" value="Rp. {{ number_format($order->tota_hrg, 0, ',', '.') }}" disabled="disabled" style="text-align: right;">
@@ -129,7 +129,7 @@
                             <div class="price-wrap text-xs-center">
                                 <p>TOTAL</p>
                                 <h3 class="value"><strong>Rp. {{ number_format($pesanan->total_psn, 0, ',', '.') }}</strong></h3>
-                                <input type="hidden" name="total_harga" value="{{ $pesanan->total_psn }}">
+                                <input type="hidden" name="total_harga" v-model="totalHarga" value="{{ $pesanan->total_psn }}">
                                 <button type="submit" class="btn theme-btn btn-lg">Pesan</button>
                             </div>
                         </div>
@@ -151,7 +151,7 @@
         el: 'body',
 
         data: {
-            pesanan: 0,
+            totalHarga: 0,
         },
 
         created : function() {
@@ -165,7 +165,9 @@
         },
 
         ready : function() {
-            //
+            $('input[name="quantity[]"]').change(function(){
+                console.log($(this).val());
+            })
         }
     });
 </script>

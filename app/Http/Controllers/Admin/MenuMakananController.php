@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Requests;
 use App\Menu;
+use App\Transformers\MenuMakananTransformer;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -41,14 +42,7 @@ class MenuMakananController extends AdminController
             ->where('id', '<>', $admin->id)
             ->select($this->columns);
 
-        return \Datatables::of($query)
-            ->addColumn('action', function ($query) use ($admin) {
-                $actionUrl = $this->url.'/'.$query->id;
-                $editBtn = admin_edit_button($actionUrl.'/edit', $admin);
-                $deleteBtn = admin_delete_button($actionUrl, $admin);
-                
-                return $editBtn.$deleteBtn;
-            })->make(true);
+        return \Datatables::of($query)->setTransformer(new MenuMakananTransformer)->make(true);
     }
 
     /**

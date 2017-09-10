@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Requests;
 use App\Pelanggan;
+use App\Transformers\PelangganTransformer;
 use Illuminate\Http\Request;
 
 class PelangganController extends AdminController
@@ -19,7 +20,7 @@ class PelangganController extends AdminController
             'id', 'nama', 'no_hp', 'alamat', 'email'
         ];
 
-        $this->actionAllowed = ['create', 'edit', 'delete'];
+        $this->actionAllowed = [];
 
         //fieldType|required|label|data
         $this->editableFields = [
@@ -38,17 +39,11 @@ class PelangganController extends AdminController
     {
         $admin = $this->admin;
         $query = $this->model
-            ->where('id', '<>', $admin->id)
             ->select($this->columns);
 
         return \Datatables::of($query)
-            ->addColumn('action', function ($query) use ($admin) {
-                $actionUrl = $this->url.'/'.$query->id;
-                $editBtn = admin_edit_button($actionUrl.'/edit', $admin);
-                $deleteBtn = admin_delete_button($actionUrl, $admin);
-                
-                return $editBtn.$deleteBtn;
-            })->make(true);
+            ->setTransformer(new PelangganTransformer)
+            ->make(true);
     }
 
     /**

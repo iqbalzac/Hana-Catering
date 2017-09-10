@@ -19,7 +19,7 @@
                     </div>
                     <div class="content">
                         <div class="text">TOTAL MENU MAKANAN</div>
-                        <div class="number count-to" data-from="0" data-to="125" data-speed="15" data-fresh-interval="20"></div>
+                        <div class="number count-to" data-from="0" data-to="{{$totalMenu}}" data-speed="15" data-fresh-interval="20"></div>
                     </div>
                 </div>
             </div>
@@ -30,7 +30,7 @@
                     </div>
                     <div class="content">
                         <div class="text">TOTAL PELANGGAN</div>
-                        <div class="number count-to" data-from="0" data-to="257" data-speed="1000" data-fresh-interval="20"></div>
+                        <div class="number count-to" data-from="0" data-to="{{$totalPelanggan}}" data-speed="1000" data-fresh-interval="20"></div>
                     </div>
                 </div>
             </div>
@@ -41,7 +41,7 @@
                     </div>
                     <div class="content">
                         <div class="text">TOTAL PENJUALAN</div>
-                        <div class="number count-to" data-from="0" data-to="243" data-speed="1000" data-fresh-interval="20"></div>
+                        <div class="number count-to" data-from="0" data-to="{{$totalPenjualan}}" data-speed="1000" data-fresh-interval="20"></div>
                     </div>
                 </div>
             </div>

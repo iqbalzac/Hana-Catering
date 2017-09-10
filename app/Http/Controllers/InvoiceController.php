@@ -18,6 +18,10 @@ class InvoiceController extends Controller
     {
         $sessionPesanan = session('pesanan');
 
+        if ($sessionPesanan->total_psn < 100000) {
+            return redirect()->to('/pesanan')->withErrors(['Maaf, total harga minimal harus Rp. 100.000,-']);
+        }
+
         if (isset($sessionPesanan) == false || count($sessionPesanan->detailPesanan) == 0)
             return redirect()->back()->withErrors(['Maaf, pesanan Anda tidak ditemukan, silahkan melakukan pemesanan ulang']);
 

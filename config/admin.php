@@ -3,10 +3,10 @@
 return [
 	// admin name and description
 	'name' => env('ADMIN_NAME', 'Admin <b>CMS</b>'),
-	'description' => env('ADMIN_DESC', 'Hana Catering Administratror'),
+	'description' => env('ADMIN_DESC', 'Laravel Admin Boilerplate'),
 
 	// admin url prefix
-	'url' => env('ADMIN_URL', 'admin-hanacatering'),
+	'url' => env('ADMIN_URL', 'admin-cms'),
 	
 	// admin asset path
 	'asset' => 'vendor/cendekia/laravel-admin-boilerplate',

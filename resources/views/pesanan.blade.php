@@ -116,10 +116,20 @@
                         @endif
 
                         @if(isset($pesanan) == true && count($pesanan->detailPesanan) > 0)
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                         <div class="widget-body">
                             <div class="price-wrap text-xs-center">
                                 <p>TOTAL</p>
                                 <h3 class="value"><strong>Rp. {{ number_format($pesanan->total_psn, 0, ',', '.') }}</strong></h3>
+                                <input type="hidden" name="total_harga" value="{{ $pesanan->total_psn }}">
                                 <button type="submit" class="btn theme-btn btn-lg">Pesan</button>
                             </div>
                         </div>
@@ -134,3 +144,29 @@
     </div>
     <!-- end:Container -->
 @endsection
+
+@push('scripts')
+<script>
+    new Vue({
+        el: 'body',
+
+        data: {
+            pesanan: 0,
+        },
+
+        created : function() {
+            //
+        },
+
+        methods: {
+            calculatePrice : function() {
+                
+            },
+        },
+
+        ready : function() {
+            //
+        }
+    });
+</script>
+@endpush

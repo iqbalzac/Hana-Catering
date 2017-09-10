@@ -28,7 +28,7 @@ class PenjualanTransformer extends TransformerAbstract
             'id_psn' => $penjualan->id_psn,
             'detail_pesanan' => $formatPesanan,
             'total_harga' => 'Rp. '.number_format($penjualan->total_psn, 0, ',', '.'),
-            'pemesan' => isset($penjualan->pelanggan->nama) ? $penjualan->pelanggan->nama .'<br>('. $penjualan->pelanggan->email.')'  : 'Unknown',
+            'pemesan' => isset($penjualan->pelanggan) ? $penjualan->pelanggan->nama .'<br>('. $penjualan->pelanggan->email.')'  : 'Unknown',
             'action' => '---'
         ];
     }

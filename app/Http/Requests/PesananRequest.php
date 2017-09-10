@@ -31,7 +31,7 @@ class PesananRequest extends FormRequest
     public function messages()
     {
         return [
-            'total_harga.min' => 'Total harga minimal harus Rp. 100.000,-'
+            'total_harga.min' => 'Maaf, Total harga minimal harus Rp. 100.000,-'
         ];
     }
 }

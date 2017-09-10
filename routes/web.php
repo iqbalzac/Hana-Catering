@@ -28,4 +28,7 @@ Route::resource('/ringkasan', 'InvoiceController');
 Route::group(['prefix' => env('ADMIN_URL', 'admin-cms'), 'middleware' => ['admin.auth']], function() {
 	Route::get('/menu-makanan/ajax',  ['uses' => 'Admin\MenuMakananController@getData', 'as' => 'menu-makanan.ajax']);
 	Route::resource('menu-makanan', 'Admin\MenuMakananController');
+
+	Route::get('/pelanggan/ajax',  ['uses' => 'Admin\PelangganController@getData', 'as' => 'pelanggan.ajax']);
+	Route::resource('pelanggan', 'Admin\PelangganController');
 });

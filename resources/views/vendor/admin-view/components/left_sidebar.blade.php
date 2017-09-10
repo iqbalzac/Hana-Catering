@@ -31,10 +31,16 @@
                     <span>Home</span>
                 </a>
             </li>
-            <li class="{{ current_page() }}">
+            <li class="{{ current_page('menu-makanan') }}">
                 <a href="{{ admin_url('menu-makanan') }}">
                     <i class="material-icons">home</i>
                     <span>Menu Makanan</span>
+                </a>
+            </li>
+            <li class="{{ current_page('pelanggan') }}">
+                <a href="{{ admin_url('pelanggan') }}">
+                    <i class="material-icons">home</i>
+                    <span>Pelanggan</span>
                 </a>
             </li>
         </ul>

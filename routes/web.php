@@ -24,3 +24,4 @@ Route::get('/menu-paketan', 'MenuPaketanController@index');
 Route::get('/pesanan/{id}/batal', 'PesananController@cancel');
 Route::resource('/pesanan', 'PesananController');
 Route::resource('/ringkasan', 'InvoiceController');
+Route::get('/profile', 'profileController@index')->name('profile');

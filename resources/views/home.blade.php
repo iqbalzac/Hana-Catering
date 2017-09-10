@@ -108,7 +108,7 @@
                             </svg>
                         </div>
                         <h3>Pesan makanannya</h3>
-                        <p>Dengan mudah makanan yang dipesan akan segera anda dapatkan</p>
+                        <p>Dengan mudah makanan yang dipesan akan segera anda temukan</p>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-4 how-it-works-steps white-txt col3">

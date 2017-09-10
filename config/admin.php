@@ -3,10 +3,10 @@
 return [
 	// admin name and description
 	'name' => env('ADMIN_NAME', 'Admin <b>CMS</b>'),
-	'description' => env('ADMIN_DESC', 'Laravel Admin Boilerplate'),
+	'description' => env('ADMIN_DESC', 'Hana Catering Administratror'),
 
 	// admin url prefix
-	'url' => env('ADMIN_URL', 'admin-cms'),
+	'url' => env('ADMIN_URL', 'admin-hanacatering'),
 	
 	// admin asset path
 	'asset' => 'vendor/cendekia/laravel-admin-boilerplate',
@@ -20,7 +20,7 @@ return [
 		// Color choices
 			// (red, pink, purple, deep-purple, indigo, blue, light-blue, cyan, teal, green)
 			// (yellow, amber, orange, deep-orange, brown, grey, blue-grey, black, light-green, lime)
-		'color' => 'cyan', //default
+		'color' => 'blue-grey', //default
 	]
 
 ];

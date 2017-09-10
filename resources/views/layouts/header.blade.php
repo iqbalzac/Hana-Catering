@@ -18,6 +18,8 @@
 	                </li>
 	                <li class="nav-item">
 	                	<a class="nav-link {{ ($nav == 'pesanan') ? 'active' : '' }}" href="{{ url('/pesanan') }}"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a> 
+	                <li class="nav-item">
+	                	<a class="nav-link {{ ($nav == 'profile') ? 'active' : '' }}" href="{{ url('/profile') }}">Profile <span class="sr-only">(current)</span></a>
 	                </li>
 	            </ul>
 	        </div>
